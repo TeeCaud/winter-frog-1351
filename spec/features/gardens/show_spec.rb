@@ -22,9 +22,11 @@ RSpec.describe 'garden show page' do
     plotplant5 = PlantPlot.create!(plot_id: plot2.id, plant_id: plant4.id)
 
     visit "/gardens/#{garden1.id}"
-save_and_open_page
+
     expect(page).to have_content("My Garden")
     expect(page).to_not have_content("Not My Garden")
     expect(page).to have_content([plant1.name, plant2.name])
+    expect(page).to_not have_content([plant3.name])
+    expect(page).to_not have_content([plant4.name])
   end
 end

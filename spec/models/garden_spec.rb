@@ -27,6 +27,7 @@ RSpec.describe Garden do
     plotplant5 = PlantPlot.create!(plot_id: plot1.id, plant_id: plant4.id)
 
     expect(garden1.less_than_100).to eq(["Marigold", "Vinca"])
+
     end
   end
 end
