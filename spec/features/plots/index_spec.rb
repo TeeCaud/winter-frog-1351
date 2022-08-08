@@ -40,7 +40,7 @@ RSpec.describe 'plots index' do
     end
   end
 
-  xit 'can remove a plant from a plot' do
+  it 'can remove a plant from a plot' do
     garden1 = Garden.create!(name: "My Garden", organic: true)
     garden2 = Garden.create!(name: "Not My Garden", organic: false)
 
